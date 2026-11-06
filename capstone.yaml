@@ -1,0 +1,14 @@
+run: docker compose up -d && npm install && npm start
+seed: npm run seed
+test: ""
+base_url: http://localhost:3000
+endpoints:
+  - POST /public/submissions
+  - GET  /public/widgets/:id/config
+  - GET  /public/widget.js
+  - POST /api/tenants
+  - GET  /api/widgets
+  - POST /api/widgets
+  - GET  /api/widgets/:id/snippet
+  - GET  /api/dashboard/submissions
+  - GET  /api/dashboard/stats
